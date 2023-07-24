@@ -437,11 +437,14 @@ p{
     .bottom-right{
         position: absolute;
         top: 28px;
-        left: 121px;
+        left: 58px;
     }
  
     
     .link{
+        top: 28px;
+      left: 123px;
+     position: absolute;
         text-decoration: none;
         font-family: 'Roboto', sans-serif;
         color: gray;
