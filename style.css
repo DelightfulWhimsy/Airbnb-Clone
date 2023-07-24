@@ -558,6 +558,8 @@ p{
     .switch {
    
         position:absolute;
+        top:280px;
+        z-index:-1;
         right: 38px;
         bottom: 251px;;
         display: inline-block;
