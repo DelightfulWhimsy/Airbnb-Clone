@@ -177,10 +177,9 @@ hr{
     justify-content: space-evenly;
     top:80px;
     font-family: 'Roboto', sans-serif;
-    margin: 5px 10px ;
+    margin: 5px 46px ;
     background-color: #ffffff;
-     /* z-index: 1; */
-}
+ }
 
 .category {
 
@@ -196,7 +195,9 @@ hr{
 .category:hover{ 
     opacity:1;
 }
-
+h5{
+    margin-bottom: 13px;
+}
 h5 .container img   :hover{
     opacity:1;
 }
@@ -223,11 +224,15 @@ h5 .container img   :hover{
 }
 
 .price{
+    z-index: -1;
+    position: relative;
+    top: 0px;
     font-family: 'Roboto', sans-serif;
     padding:10px;
     border-right:1px solid lightgray ;
 }
 .des{
+    display: flex;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     padding: 14px;
@@ -237,6 +242,8 @@ h5 .container img   :hover{
 .switch {
    
     position: relative;
+    top: -1px;
+    right: 9px;
     display: inline-block;
     width: 60px;
     height: 34px;
@@ -307,7 +314,7 @@ h5 .container img   :hover{
       position: fixed;
       background-color: black;
       bottom: 57px;
-      left: 42vw;
+      left: 44vw;
       border: none;
       border-radius: 30px;
       width:160px;
@@ -387,4 +394,282 @@ p{
 
 }
 
+@media only screen  and (max-width: 500px){
+    .hero-nav{
+     margin: 0px;
+        padding: 0px 0px;
+        width: 100vw;
+        gap:0px;
+    }
+    
+    .logo{
+        display: none;
+       
+    }
+    
+    .center{
 
+        position: relative;
+        right: 3px;
+        width:100vw;
+        height: 60px;
+        margin-left: 12px;
+        margin-top: 28px; 
+        margin-bottom: 15px;
+        border-radius:30px;
+        border: 1px solid lightgray;
+        box-shadow:2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    
+    }
+    
+    .center a{
+        
+        font-size: 13px;
+    }
+    
+    .center .bottom{
+        position: absolute;
+        top: 28px;
+        left: 57px;
+        color: gray;
+    }
+    .bottom-right{
+        position: absolute;
+        top: 28px;
+        left: 121px;
+    }
+ 
+    
+    .link{
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+        color: gray;
+        cursor: pointer;  
+    }
+    
+    .link-right{
+        position: absolute;
+        left:57px;
+        border:none;
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        cursor: pointer;
+    }
+    
+    
+    .search{
+        position: absolute;
+        top: 17px;
+        left: 6px;
+        height: 26px;
+        padding:  0 5px;
+        cursor: pointer;
+        z-index: 2;
+    }
+    
+    .end{
+        display: none;
+    }
+    
+     .end a{
+        display: none;
+       
+     }
+    
+    .air{
+        display: none;
+   
+    }
+ 
+    .globe img{
+        display: none;
+
+    }
+
+    .profile{
+        display: none;
+       
+    }    
+    .profile .menu
+    {   display: none;
+     
+     }
+     .profile .usr{
+        display: none;
+     }
+    
+     .carousel{
+        width: 93vw;
+        display: flex;
+        position: sticky;
+        overflow: scroll;
+        justify-content: space-evenly;
+        top:80px;
+        font-family: 'Roboto', sans-serif;
+        margin: 10px 10px ;
+        background-color: #ffffff;
+         z-index: 1;
+    }
+
+     .container-2{
+         display: flex;
+         flex-direction: column;
+         padding: 6px;
+         width:90vw;  
+    }
+    .container{
+        margin: 10px;
+    }
+    h5{
+        margin:5px;
+       
+    }
+    .container-2 .price {
+        padding: 10px;
+        width: 49vw;
+        border: none;
+    
+    }
+    .price h4{
+        margin: 0px;
+    }
+    div.des{
+        padding: 0px;
+        width: 45vw;
+        margin-bottom: 5px;
+    }
+    .des p{
+        padding: 0px;
+        color:rgb(114, 111, 111);
+    }
+    h4 .price{
+        width:50vw;
+        margin: 0px;
+        font-size: 15px;
+        padding: 0px;
+        padding-bottom: 5px;
+    }
+    
+    .switch {
+   
+        position:absolute;
+        right: 38px;
+        bottom: 251px;;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+        margin-top: 10px;
+        
+      }
+
+     .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      /* The slider */
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+        z-index: -1;
+    
+      }
+    
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      
+      input:checked + .slider {
+        background-color: #2196F3;
+      }
+      
+      input:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+      }
+      
+      input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+      
+      /* Rounded sliders */
+      .slider.round {
+        border-radius: 34px;
+        background-color: gray; 
+    }
+     
+    .slider.round:before {
+        border-radius: 50%;
+    }
+    .card{
+        transition: .3s;
+        width: 93vw;
+        border-radius: 14px;
+        padding: 10px;
+        margin: 50px auto;
+        z-index: -1;
+    }
+    
+    .card img{
+        width: 100%;
+        height: 270px;
+        border-radius: 14px;
+    }
+    
+    .cards{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 93vw;
+        margin: 0 auto;
+    }
+    .btn-1{
+        display: flex;
+        position: absolute;
+        position: fixed;
+        background-color: black;
+        bottom: 57px;
+        left: 24vw;
+        border: none;
+        border-radius: 30px;
+        width:160px;
+        cursor: pointer;
+  }
+    .btn-2 a{
+        text-decoration: none;
+        color: white;
+        font-family: 'Roboto',sans-serif;
+        padding: 10px;
+        position: relative;
+        bottom: 23px;
+        left: 11px;
+        font-size: 16px;
+    
+    }
+      
+    .btn-2 img{
+        padding: 10px;
+        height: 40px;
+        margin: 10px;
+    }
+}
+
+    
