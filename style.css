@@ -224,53 +224,52 @@ h5 .container img   :hover{
 }
 
 .price{
-    z-index: -1;
     position: relative;
     top: 0px;
     font-family: 'Roboto', sans-serif;
     padding:10px;
     border-right:1px solid lightgray ;
+    z-index: -1;
 }
 .des{
     display: flex;
     text-align: center;
+
     font-family: 'Roboto', sans-serif;
     padding: 14px;
+    margin-right: 73px;
 }
 
 /* The switch - the box around the slider */
 .switch {
    
     position: relative;
-    top: -1px;
-    right: 9px;
     display: inline-block;
+    top: 11px;
+    right:32px;
     width: 60px;
     height: 34px;
-    margin-top: 10px;
     
   }
 
-  /* Hide default HTML checkbox */
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  /* The slider */
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-    z-index: -1;
+  .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      z-index: -1;
+  
+    }
 
-  }
+  /* Hide default HTML checkbox */
+
+  .switch input {display: none;}
+
+  /* The slider */
 
   .slider:before {
     position: absolute;
@@ -280,7 +279,6 @@ h5 .container img   :hover{
     left: 4px;
     bottom: 4px;
     background-color: white;
-    -webkit-transition: .4s;
     transition: .4s;
   }
   
@@ -288,15 +286,12 @@ h5 .container img   :hover{
     background-color: #2196F3;
   }
   
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+  input:checked + .slider::before {
+    transform:translateX(26px);
+
   }
   
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
+
   
   /* Rounded sliders */
   .slider.round {
@@ -370,7 +365,7 @@ h4{
 
 p{
     padding: 5px;
-    color: lightgray;
+    color: gray;
     font-family: 'Roboto', sans-serif;
 }
  
@@ -394,21 +389,26 @@ p{
 
 }
 
+
+
+/* For mobile phones screen size upto 500px */
+
 @media only screen  and (max-width: 500px){
     .hero-nav{
-     margin: 0px;
+        margin: 0px;
         padding: 0px 0px;
         width: 100vw;
         gap:0px;
+        cursor: pointer;
     }
     
-    .logo{
+    .logo,.end,.end a,.air,.globe img,.profile,.profile.menu,.profile .usr {
         display: none;
        
     }
     
     .center{
-
+        cursor: pointer;
         position: relative;
         right: 3px;
         width:100vw;
@@ -420,14 +420,10 @@ p{
         border: 1px solid lightgray;
         box-shadow:2px 2px 2px 1px rgba(0, 0, 0, 0.2);
         z-index: 1;
-    
-    }
-    
-    .center a{
-        
         font-size: 13px;
     }
     
+   
     .center .bottom{
         position: absolute;
         top: 28px;
@@ -470,39 +466,10 @@ p{
         padding:  0 5px;
         cursor: pointer;
         z-index: 2;
+    
     }
     
-    .end{
-        display: none;
-    }
-    
-     .end a{
-        display: none;
-       
-     }
-    
-    .air{
-        display: none;
    
-    }
- 
-    .globe img{
-        display: none;
-
-    }
-
-    .profile{
-        display: none;
-       
-    }    
-    .profile .menu
-    {   display: none;
-     
-     }
-     .profile .usr{
-        display: none;
-     }
-    
      .carousel{
         width: 93vw;
         display: flex;
@@ -514,6 +481,7 @@ p{
         margin: 10px 10px ;
         background-color: #ffffff;
          z-index: 1;
+         cursor: pointer;
     }
 
      .container-2{
@@ -527,6 +495,7 @@ p{
     }
     h5{
         margin:5px;
+        cursor: pointer;
        
     }
     .container-2 .price {
@@ -555,41 +524,37 @@ p{
         padding-bottom: 5px;
     }
     
+    .button{
+        height:0px;
+    }
     .switch {
    
-        position:absolute;
-        top:280px;
-        z-index:-1;
-        right: 38px;
-        bottom: 251px;;
+        position:relative;
         display: inline-block;
+        top: -56px;
+        left: 176px;
         width: 60px;
         height: 34px;
-        margin-top: 10px;
-        
       }
 
-     .switch input {
-        opacity: 0;
-        width: 0;
-        height: 0;
-      }
-      /* The slider */
-    .slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #ccc;
-        -webkit-transition: .4s;
-        transition: .4s;
-        z-index: -1;
-    
-      }
-    
-      .slider:before {
+      
+      .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          border-radius: 34px;;
+          transition: .4s;
+          z-index: -1;
+          
+        }
+   
+        .switch input {display: none;}
+        
+      .slider::before {
         position: absolute;
         content: "";
         height: 26px;
@@ -597,33 +562,22 @@ p{
         left: 4px;
         bottom: 4px;
         background-color: white;
-        -webkit-transition: .4s;
         transition: .4s;
+        border-radius: 50px;
+        
       }
       
       input:checked + .slider {
         background-color: #2196F3;
       }
       
-      input:focus + .slider {
-        box-shadow: 0 0 1px #2196F3;
-      }
       
       input:checked + .slider:before {
-        -webkit-transform: translateX(26px);
-        -ms-transform: translateX(26px);
+       
         transform: translateX(26px);
       }
       
-      /* Rounded sliders */
-      .slider.round {
-        border-radius: 34px;
-        background-color: gray; 
-    }
-     
-    .slider.round:before {
-        border-radius: 50%;
-    }
+  
     .card{
         transition: .3s;
         width: 93vw;
@@ -640,6 +594,7 @@ p{
     }
     
     .cards{
+        cursor: pointer;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
@@ -648,7 +603,6 @@ p{
     }
     .btn-1{
         display: flex;
-        position: absolute;
         position: fixed;
         background-color: black;
         bottom: 57px;
