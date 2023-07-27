@@ -532,7 +532,7 @@ p{
         position:relative;
         display: inline-block;
         top: -56px;
-        left: 176px;
+        left: 248px;
         width: 60px;
         height: 34px;
       }
@@ -606,7 +606,7 @@ p{
         position: fixed;
         background-color: black;
         bottom: 57px;
-        left: 24vw;
+        left: 30vw;
         border: none;
         border-radius: 30px;
         width:160px;
