@@ -162,11 +162,10 @@
 
 hr{
     width:90vw;
-    border:1;
     height: 1px;
     opacity: 0.2;
     margin: 2px auto;
-    position: sticky;
+    position: fixed;
     bottom: 0px;
 }
 
@@ -406,6 +405,10 @@ p{
         display: none;
        
     }
+    hr{
+        position: fixed;
+        z-index: 2;
+    }
     
     .center{
         cursor: pointer;
@@ -473,7 +476,7 @@ p{
      .carousel{
         width: 93vw;
         display: flex;
-        position: sticky;
+        position: fixed;
         overflow: scroll;
         justify-content: space-evenly;
         top:80px;
@@ -486,6 +489,7 @@ p{
 
      .container-2{
          display: flex;
+         margin-top: 100px;
          flex-direction: column;
          padding: 6px;
          width:90vw;  
@@ -532,7 +536,7 @@ p{
         position:relative;
         display: inline-block;
         top: -56px;
-        left: 248px;
+        left: 173px;
         width: 60px;
         height: 34px;
       }
@@ -606,7 +610,7 @@ p{
         position: fixed;
         background-color: black;
         bottom: 57px;
-        left: 30vw;
+        left: 25vw;
         border: none;
         border-radius: 30px;
         width:160px;
@@ -617,9 +621,8 @@ p{
         color: white;
         font-family: 'Roboto',sans-serif;
         padding: 10px;
-        position: relative;
         bottom: 23px;
-        left: 11px;
+        left: 25px;
         font-size: 16px;
     
     }
